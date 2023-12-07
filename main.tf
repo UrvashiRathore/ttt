@@ -12,12 +12,3 @@ resource "aws_subnet" "public-subnet" {
     Name = "Public subnet "
   }
 }
-resource "aws_subnet" "private-subnet" {
-  vpc_id = aws_vpc.s7.id
-  cidr_block = "10.0.8.0/24"
-  availability_zone = "ap-south-1a"
-  tags = {
-    Name = "Private subnet "
-  }
-}
-
